@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background: black;
+        display: block;
+        margin: 0px;
+        padding: 10px;
+      }
+      #bd{
+        width:480px;
+        height: 500px;
+        margin: auto;
+        border:1px solid hsl(213, 19%, 18%);
+        border-radius: 40px;
+        color: white;
+        background: hsl(213, 19%, 18%);
+      }
+      header{
+        height: 10px;
+        padding: 40px;
+      }
+
+      #we{
+        padding: 20px;
+        border-radius: 50%;
+        border:1px solid hsl(216, 12%, 8%);
+        background: hsl(216, 12%, 8%);
+        position: 23% 50%;
+      }
+      article{
+        padding: 60px;
+        padding-bottom: 0px;
+        font-weight: 100;
+        color: white;
+      }
+      p{
+        font-weight: 100;
+        color: hsl(216, 12%, 54%);
+      }
+
+      #cll{
+        padding: 60px;
+        height: 80px;
+      }
+
+      .dot{
+        padding: 20px;
+        border: 1px solid hsl(216, 12%, 8%);
+        margin-left: 0px;
+        margin-right: 18px;
+        border-radius: 50%;
+        color: hsl(216, 12%, 54%);
+        background-color:  hsl(216, 12%, 8%);
+        position: 23%;
+      }
+
+      .jal{
+        background: hsl(217, 12%, 63%);
+      }
+
+      .dot:hover{
+        background: hsl(25, 97%, 53%);
+      }
+      input{
+        margin-top: 50px;
+        width: 360px;
+        height: 50px;
+        background: hsl(25, 97%, 53%);
+        border: none;
+        border-radius: 10px;
+      }
+
+      input:hover{
+        background: white;
+        color: orange;
+      }
+
+      #as{
+        text-align: center;
+        padding-top: 60px;
+        margin-bottom: 40px;
+      }
+      .ds{
+        background:hsl(216, 12%, 8%);
+        border: 1px solid hsl(216, 12%, 8%);
+        margin-top: 60px;
+        padding: 10px;
+        margin-left: 5px;
+        width: 200px;
+        margin: auto;
+        border-radius: 30px;
+        text-align: center;
+        color: hsl(25, 97%, 53%);
+        margin-bottom: 0px;
+      }
+      .oo{
+        padding: 60px;
+        padding-top: 20px;
+        color: font-weight: 100;
+        color: hsl(216, 12%, 54%);
+      }
+      #sp{
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bd">
+      <header>
+        <img src="icon-star.svg" alt="" id="we">
+      </header>
+      <article color='white'>
+        <h3>How did we do?</h3>
+        <p>Please let us know how we did with your support ewquest. All feedback is appreciated to help us improve our offering!</p>
+      </article>
+      <div id="cll">
+        <span class='dot' data-row='1'>1</span>
+        <span class='dot'data-row='2'>2</span>
+        <span class='dot' data-row='3'>3</span>
+        <span class='dot' data-row='4'>4</span>
+        <span class='dot' data-row='5'>5</span> <br>
+        <input type="button" id="bt" value="SUBMIT">
+      </div>
+
+    </div>
+
+   <script type="text/javascript">
+   var out = document.getElementById('bd')
+   var sp = document.getElementsByTagName('span')
+   for (var i = 0; i < sp.length; i++) {
+     sp[i].addEventListener('click',function () {
+       if (!this.classList.contains('jal')) {
+         this.classList.add('jal')
+       }
+     })
+   }
+
+   var send = document.getElementById('bt')
+   bt.addEventListener('click',function () {
+     let ss = document.getElementsByClassName('jal')
+     var p = ss[0].getAttribute('data-row')
+     var html = '<section id="as"><img src="illustration-thank-you.svg" alt="" id="ll"></section><br>'
+     html += '<section class="ds">You selected '+p+' out of 5</section>'
+     html += '<section class="oo"><h3 id="sp">Thank you!<h3><p>We appreciate you taking the time to give a rating.If you ever need more support,do not hesitate to get in touch</p></section>'
+     bd.innerHTML = html
+   })
+
+
+   </script>
+  </body>
+</html>
